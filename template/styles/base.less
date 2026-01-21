@@ -21,111 +21,104 @@ h6 {
 
 // Shared styles
 body {
-  display: grid;
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
+  background-color: @oxfordBlue;
 }
-
+ 
 nav {
   background-color: @moonGray;
-  padding: 20px 0;
-
-  ul.navigation-items {
+ 
+  .navigation-items {
     list-style: none;
-    margin: 0;
     padding: 0;
-
-    li.navigation-item {
-      a {
-        text-decoration: none;
-        align-items: center;
-        color: black;
-        display: block;
-        padding: 6px 30px;
-        font-size: 16px;
-      }
-    }
+    margin: 0;
+  }
+ 
+  .navigation-item a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 15px 20px;
   }
 }
-
+ 
 .hero-section {
-  display: flex;
   background-color: @richBlack;
+  display: flex;
   align-items: center;
   gap: 20px;
-
+ 
   .hero-image {
+    border-radius: 50%;
     background-size: cover;
     background-position: center;
-    border-radius: 50%;
     flex-shrink: 0;
   }
-
+ 
   p {
     color: white;
-    font-size: 18px;
-    line-height: 1.2;
+    margin: 0;
   }
 }
-
+ 
 .gallery {
-  display: grid;
   background-color: @ultraViolet;
+  display: grid;
+  padding: 20px;
   gap: 15px;
-
+ 
   .gallery-item {
-    width: 100%;
-    overflow: hidden;
-
     img {
-      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
   }
 }
-
+ 
 footer {
-  display: flex;
   background-color: @richBlack;
+  color: white;
+  display: flex;
   align-items: center;
-  gap: 25px;
-
+  gap: 15px;
+  padding: 20px;
+ 
   img {
-    flex-shrink: 0;
+    width: 60px;
+    height: auto;
   }
-
+ 
   p {
-    color: white;
-    font-size: 16px;
     margin: 0;
+    font-size: 14px;
   }
 }
-
+ 
 aside {
   background-color: @moonGray;
-
+ 
   h2 {
     text-align: center;
-    padding: 20px;
-    margin: 0;
-    font-size: 20px;
+    color: @oxfordBlue;
+    margin: 15px 0;
   }
-
+ 
   .planets {
-    display: grid;
-
-    .planet {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        display: block;
-      }
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 15px 20px;
+  }
+ 
+  .planet img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
   }
 }
 
