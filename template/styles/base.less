@@ -309,7 +309,7 @@ aside {
   
   }
 
-
+  
 // Mobile media query
 @media only screen and (max-width: 767px) {
   nav {
@@ -317,15 +317,15 @@ aside {
   }
 
   body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto;
   }
 
   aside {
-    order: 1;
-
+    grid-row: 1;
+    border-left: 8px solid #4b4b4b;
+    
     h2 {
-      color: black;
       font-size: 20px;
       padding-top: 15px;
     }
@@ -333,33 +333,49 @@ aside {
     .planets {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 25px ;
+      gap: 25px;
       padding: 15px 100px 30px;
       justify-items: center;
       align-items: center;
     }
 
     .planet img {
-      width: 85px;
-      height: 85px;
+      width: 80px;
+      height: 80px;
       object-fit: contain;
     }
   }
 
   main {
-    order: 2;
-    display: flex;
-    flex-direction: column;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: auto auto auto;
   }
 
   footer {
-    order: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-top: 8px solid #032B52;
+    padding: 15px 50px 10px;
+    gap: 12px;
+    align-items: center;
+  }
+
+  footer img {
+    width: 70px;
+  }
+
+  footer p {
+    font-size: 15px;
+    line-height: 1.3;
   }
 
   .gallery {
-    order: 2;
+    grid-row: 2;
+    display: grid;
     grid-template-columns: 1fr;
-    padding: 18px;
+    padding: 40px 18px;
     gap: 22px;
   }
 
@@ -369,29 +385,32 @@ aside {
   }
 
   .gallery .gallery-item img {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
   }
 
   .hero-section {
-    order: 3;
-    flex-direction: column;
+    grid-row: 3;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
     text-align: center;
-    padding: 26px 18px;
+    padding: 40px 0 60px;
     gap: 14px;
   }
 
   .hero-section .hero-image {
-    width: 110px;
-    height: 110px;
-    margin: 0 auto;
+    width: 145px;
+    height: 145px;
+    border: 8px solid #032B52;
   }
 
   .hero-section p {
     max-width: 340px;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 15px;
+    line-height: 1.3;
+    padding: 0 20px;
+    text-align: left;
   }
-
 }
